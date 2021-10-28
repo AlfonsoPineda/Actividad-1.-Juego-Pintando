@@ -26,16 +26,15 @@ def square(start, end):
     end_fill()
 
 
-def circle(start, end):
+def circulo(start, end):
     "Draw circle from start to end."
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
 
-    import turtle
-
-    turtle.circle(end.x - start.x)
+    r = math.sqrt((end.x - start.x)**2 + (end.y - start.y)**2)
+    circle(r)
 
     end_fill()
 
